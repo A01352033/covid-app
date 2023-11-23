@@ -14,12 +14,10 @@ interface AppComponent {
 
 class MyApp : Application() {
 
-    val appComponent: AppComponent by lazy {
-        DaggerAppComponent.builder()
-            .networkModule(NetworkModule())
-            .repositoryModule(RepositoryModule())
-            .viewModelModule(ViewModelModule())
-            .build()
-    }
+    /*val appComponent: AppComponent = DaggerAppComponent.builder()
+        .networkModule(NetworkModule())
+        .repositoryModule(RepositoryModule())
+        .viewModelModule(ViewModelModule())
+        .build()*/
 }
 

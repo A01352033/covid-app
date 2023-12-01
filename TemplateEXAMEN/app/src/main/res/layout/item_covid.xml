@@ -39,6 +39,26 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:text="Recient Date:"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        android:paddingBottom="1dp"
+        android:background="@color/white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        android:paddingBottom="4dp"
+        android:text="2023-03-09"
+        android:background="@color/white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="Total cases:"
         android:textSize="14sp"
         android:fontFamily="sans-serif-medium"

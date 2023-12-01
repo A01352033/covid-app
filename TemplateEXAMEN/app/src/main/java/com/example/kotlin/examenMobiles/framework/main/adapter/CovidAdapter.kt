@@ -24,6 +24,7 @@ class CovidAdapter(private val data: List<CovidModel>) : RecyclerView.Adapter<Co
         fun bind(covidModel: CovidModel) {
             binding.textViewCountry.text = covidModel.country
             binding.textViewRegion.text = covidModel.region
+            //binding.textViewDate.text = covidModel.cases.date
             binding.textViewTotal.text = covidModel.cases.total.toString()
             binding.textViewNew.text = covidModel.cases.new.toString()
         }

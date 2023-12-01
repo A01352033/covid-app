@@ -6,6 +6,6 @@ import com.example.kotlin.examenMobiles.remote.ApiService
 
 class CovidRepository(private val apiService: ApiService) {
     suspend fun getCovidData(apiKey: String): List<CovidModel> {
-        return ApiClient.apiService.getCovidData(apiKey)
+        return ApiClient.apiService.getCovidData(apiKey, "Canada")
     }
 }

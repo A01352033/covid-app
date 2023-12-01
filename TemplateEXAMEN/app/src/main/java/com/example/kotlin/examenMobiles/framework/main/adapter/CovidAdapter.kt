@@ -15,6 +15,7 @@ class CovidAdapter(private val data: List<CovidModel>) : RecyclerView.Adapter<Co
 
     override fun onBindViewHolder(holder: CovidViewHolder, position: Int) {
         holder.bind(data[position])
+
     }
 
     override fun getItemCount(): Int = data.size

@@ -6,6 +6,15 @@
     android:padding="16dp">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Country:"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        android:paddingBottom="1dp"
+        android:background="@color/white"/>
+    <TextView
         android:id="@+id/textViewCountry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -13,7 +22,8 @@
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/black"
         android:paddingBottom="4dp"
-        android:text="Country Name" />
+        android:text="Country Name"
+        android:background="@color/white"/>
 
     <TextView
         android:id="@+id/textViewRegion"
@@ -23,8 +33,18 @@
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/black"
         android:paddingBottom="4dp"
-        android:text="Region Name" />
+        android:text="Region Name"
+        android:background="@color/white"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Total cases:"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        android:paddingBottom="1dp"
+        android:background="@color/white"/>
     <TextView
         android:id="@+id/textViewTotal"
         android:layout_width="match_parent"
@@ -33,8 +53,18 @@
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/black"
         android:paddingBottom="4dp"
-            android:text="Total Cases" />
+        android:text="Total Cases"
+        android:background="@color/white"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="New Cases:"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@android:color/black"
+        android:paddingBottom="1dp"
+        android:background="@color/white"/>
     <TextView
         android:id="@+id/textViewNew"
         android:layout_width="match_parent"
@@ -43,7 +73,9 @@
         android:fontFamily="sans-serif-medium"
         android:textColor="@android:color/black"
         android:paddingBottom="4dp"
-        android:text="New Cases" />
+        android:text="New Cases"
+        android:background="@color/white"/>
+
 
     <!-- Puedes agregar más TextViews o elementos aquí, por ejemplo, para mostrar la región, casos totales, etc. -->
 

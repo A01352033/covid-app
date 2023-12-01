@@ -1,12 +1,11 @@
-package com.example.kotlin.examenMobiles.data.repository
+package com.example.kotlin.examenMobiles.repository
 
-import com.example.kotlin.examenMobiles.data.remote.ApiService
-import com.example.kotlin.examenMobiles.data.remote.CovidModel
+import com.example.kotlin.examenMobiles.model.CovidModel
+import com.example.kotlin.examenMobiles.remote.ApiClient
+import com.example.kotlin.examenMobiles.remote.ApiService
 
 class CovidRepository(private val apiService: ApiService) {
     suspend fun getCovidData(apiKey: String): List<CovidModel> {
-        return apiService.getCovidData(apiKey)
+        return ApiClient.apiService.getCovidData(apiKey)
     }
 }
-
-

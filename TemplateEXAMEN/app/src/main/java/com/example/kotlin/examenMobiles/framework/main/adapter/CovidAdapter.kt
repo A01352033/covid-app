@@ -1,33 +1,30 @@
-package com.example.kotlin.examenMobiles.framework.main.adapter
+package com.example.kotlin.examenMobiles.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kotlin.examenMobiles.R
-import com.example.kotlin.examenMobiles.data.remote.CovidModel
+import com.example.kotlin.examenMobiles.databinding.ItemCovidBinding
+import com.example.kotlin.examenMobiles.model.CovidModel
 
-class CovidAdapter(private val covidData: List<CovidModel>) : RecyclerView.Adapter<CovidAdapter.ViewHolder>() {
+class CovidAdapter(private val data: List<CovidModel>) : RecyclerView.Adapter<CovidAdapter.CovidViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false)
-        return ViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CovidViewHolder {
+        val binding = ItemCovidBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return CovidViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentItem = covidData[position]
-        holder.bind(currentItem)
+    override fun onBindViewHolder(holder: CovidViewHolder, position: Int) {
+        holder.bind(data[position])
     }
 
-    override fun getItemCount(): Int {
-        return covidData.size
-    }
+    override fun getItemCount(): Int = data.size
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // Puedes acceder a los elementos de la vista y establecer los datos aquí
-
+    class CovidViewHolder(private val binding: ItemCovidBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(covidModel: CovidModel) {
-            // Implementa la lógica para establecer los datos en la vista
+            binding.textViewCountry.text = covidModel.country
+            binding.textViewRegion.text = covidModel.region
+            binding.textViewTotal.text = covidModel.cases.total.toString()
+            binding.textViewNew.text = covidModel.cases.new.toString()
         }
     }
 }

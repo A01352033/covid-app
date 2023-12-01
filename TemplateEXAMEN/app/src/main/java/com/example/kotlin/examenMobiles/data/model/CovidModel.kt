@@ -1,7 +1,9 @@
-package com.example.kotlin.examenMobiles.data.remote
+package com.example.kotlin.examenMobiles.model
+
+import com.example.kotlin.examenMobiles.data.model.Cases
 
 data class CovidModel(
     val country: String,
-    val cases: Int,
-    // Agrega más propiedades según la respuesta de la API
+    val region: String,
+    val cases: Cases
 )
